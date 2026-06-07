@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>PoyaLoTer DNS | Dynamic IPv4 Server Generator</title>
+    <title>PoyaLoTer DNS | Professional Gaming Engine</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -14,105 +14,92 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            background: #F4F9FF;
+            background: #0A0F1A;
             font-family: 'Inter', sans-serif;
-            padding: 2rem;
-            color: #1A2C3E;
+            padding: 1.5rem;
+            color: #E8F0FE;
         }
-
-        .card-dns {
-            background: #FFFFFF;
+        .glass-premium {
+            background: rgba(18, 25, 45, 0.85);
+            backdrop-filter: blur(12px);
             border-radius: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 110, 255, 0.12);
+            border: 1px solid rgba(0, 180, 255, 0.25);
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.6);
         }
-
-        .btn-primary-dns {
-            background: linear-gradient(105deg, #0066FF, #0099FF);
+        .btn-neon {
+            background: linear-gradient(95deg, #0A5CFF, #00B0FF);
             border: none;
-            font-weight: 600;
+            font-weight: 700;
             color: white;
             transition: 0.2s;
-            box-shadow: 0 2px 6px rgba(0,102,255,0.2);
+            box-shadow: 0 4px 12px rgba(0,100,255,0.4);
         }
-        .btn-primary-dns:hover {
+        .btn-neon:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 20px -10px #0066FF70;
+            box-shadow: 0 12px 25px rgba(0,150,255,0.5);
         }
-
-        .btn-outline-dns {
+        .btn-outline-neon {
             background: transparent;
-            border: 1px solid #B8D1FF;
-            color: #0066CC;
-            font-weight: 500;
+            border: 1px solid #2C5282;
+            color: #A0D0FF;
+            font-weight: 600;
         }
-        .btn-outline-dns:hover {
-            background: #EFF4FF;
-            border-color: #3399FF;
+        .btn-outline-neon:hover {
+            background: rgba(0,150,255,0.1);
+            border-color: #3B82F6;
         }
-
-        .input-dns {
-            background: #FFFFFF;
-            border: 1px solid #DDE3ED;
+        .input-neon {
+            background: rgba(5, 12, 25, 0.9);
+            border: 1px solid #2A3F6E;
             border-radius: 1.2rem;
             padding: 0.85rem 1.2rem;
-            font-size: 0.9rem;
+            color: white;
             font-weight: 500;
-            transition: 0.2s;
         }
-        .input-dns:focus {
+        .input-neon:focus {
             outline: none;
-            border-color: #3399FF;
-            box-shadow: 0 0 0 3px rgba(51,153,255,0.2);
+            border-color: #2B9AFF;
+            box-shadow: 0 0 0 3px rgba(43,154,255,0.2);
         }
-
-        .badge-dns {
-            background: #EFF3F9;
+        .badge-neon {
+            background: #0F172A;
             border-radius: 2rem;
             padding: 0.3rem 1rem;
             font-size: 0.75rem;
             font-weight: 600;
-            color: #1E4A76;
+            border-left: 2px solid #2B9AFF;
         }
-
-        .dns-history-item {
-            background: #FFFFFF;
+        .dns-card {
+            background: rgba(12, 20, 35, 0.8);
             border-radius: 1.5rem;
             padding: 1rem 1.2rem;
             margin-bottom: 1rem;
-            border-left: 5px solid #2B7EFF;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border-left: 4px solid #0A5CFF;
         }
-
-        .dns-preview {
-            font-family: 'Inter', monospace;
-            background: #F8FAFE;
+        .preview-box {
+            font-family: 'JetBrains Mono', monospace;
+            background: #03070fcc;
             border-radius: 1rem;
-            padding: 0.8rem;
-            font-weight: 500;
-            font-size: 0.85rem;
-            border: 1px solid #E2EDFF;
+            padding: 1rem;
+            font-size: 0.8rem;
+            border: 1px solid #1E3A5F;
         }
-
-        .tab-dns {
+        .tab-premium {
             background: transparent;
             border: none;
             padding: 0.6rem 1.6rem;
             border-radius: 2rem;
             font-weight: 600;
-            color: #3B5C7E;
+            color: #9BB5E0;
             transition: 0.2s;
         }
-        .tab-active-dns {
-            background: #FFFFFF;
-            color: #0066FF;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
-            border: 1px solid #E2E8F0;
+        .tab-active-premium {
+            background: linear-gradient(135deg, #0A5CFF, #0095FF);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,100,255,0.3);
         }
-
-        .status-dns-active {
+        .status-active {
             background: #10B981;
             color: white;
             border-radius: 30px;
@@ -121,312 +108,299 @@
             font-weight: 700;
             display: inline-block;
         }
-        .status-dns-inactive {
-            background: #94A3B8;
+        .status-inactive {
+            background: #6B7280;
             color: white;
             border-radius: 30px;
             padding: 0.2rem 0.9rem;
             font-size: 0.7rem;
         }
+        .license-hidden {
+            filter: blur(5px);
+            user-select: none;
+        }
     </style>
 </head>
 <body>
 
-<!-- LOGIN WRAPPER (same license system) -->
-<div id="loginDnsWrapper" style="max-width: 500px; margin: 10vh auto;">
-    <div class="card-dns" style="padding: 2rem; text-align: center;">
-        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066FF, #66CCFF); border-radius: 30px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-globe" style="font-size: 2.2rem; color: white;"></i>
+<!-- LOGIN - NO KEY SHOWN -->
+<div id="loginWrapper" style="max-width: 480px; margin: 12vh auto;">
+    <div class="glass-premium" style="padding: 2rem; text-align: center;">
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #0A5CFF, #00B0FF); border-radius: 28px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: white;"></i>
         </div>
-        <h1 style="font-weight: 800; font-size: 2rem; background: linear-gradient(145deg, #003D8C, #0099FF); -webkit-background-clip: text; background-clip: text; color: transparent;">PoyaLoTer DNS Panel</h1>
-        <p style="color: #3D6A9A;">Dynamic IPv4 · 5 Global Servers</p>
-        <div style="margin: 14px 0; font-size: 0.8rem;"><i class="fab fa-telegram"></i> @PyLTR | <i class="fab fa-telegram"></i> @PoyaLoTer_Codm</div>
-        <input type="text" id="loginDnsKey" class="input-dns" style="width: 100%; margin: 1rem 0;" placeholder="License key (Buy key Tg : @PyLTR)">
-        <button id="doLoginDnsBtn" class="btn-primary-dns" style="width: 100%; padding: 0.9rem; border-radius: 3rem;">Unlock DNS Panel <i class="fas fa-arrow-right"></i></button>
-        <div class="badge-dns" style="margin-top: 1.5rem; display: inline-block;">🔐 license based timer</div>
+        <h1 style="font-weight: 800; font-size: 2rem; letter-spacing: -0.5px; background: linear-gradient(145deg, #FFFFFF, #6BC5FF); -webkit-background-clip: text; background-clip: text; color: transparent;">PoyaLoTer DNS</h1>
+        <p style="color: #8AAEE0; margin-top: 8px;">Professional Gaming DNS Generator</p>
+        <div style="margin: 16px 0; font-size: 0.8rem;"><i class="fab fa-telegram"></i> @PyLTR | <i class="fab fa-telegram"></i> @PoyaLoTer_Codm</div>
+        <p style="color: #F59E0B; font-size: 0.75rem; margin-bottom: 1rem;">🔐 Contact @PyLTR to purchase license key</p>
+        <input type="text" id="loginKeyInput" class="input-neon" style="width: 100%; margin: 0.5rem 0;" placeholder="Enter your license key" autocomplete="off">
+        <button id="doLoginBtn" class="btn-neon" style="width: 100%; padding: 0.9rem; border-radius: 3rem; margin-top: 1rem;">Unlock Panel <i class="fas fa-arrow-right"></i></button>
+        <div class="badge-neon" style="margin-top: 1.5rem; display: inline-block;">⚡ No key shown — secure purchase only</div>
     </div>
 </div>
 
-<!-- MAIN DNS PANEL -->
-<div id="mainDnsApp" style="display: none; max-width: 1300px; margin: 0 auto;">
-    <div class="card-dns" style="padding: 1.8rem;">
+<!-- MAIN PANEL -->
+<div id="mainApp" style="display: none; max-width: 1400px; margin: 0 auto;">
+    <div class="glass-premium" style="padding: 1.8rem;">
         <!-- header -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid #E2EAF5; padding-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid #1E2F4A; padding-bottom: 1rem;">
             <div>
-                <h2 style="font-weight: 800; font-size: 1.8rem;"><span style="color:#0066FF;">PoyaLoTer</span> DNS · Multi‑Server Engine</h2>
-                <div style="display: flex; gap: 1rem; margin-top: 6px; color:#5478A0;">
-                    <span><i class="fab fa-telegram"></i> @PyLTR</span>
-                    <span><i class="fab fa-telegram"></i> @PoyaLoTer_Codm</span>
-                </div>
+                <h2 style="font-weight: 800; font-size: 1.8rem;"><span style="color:#2B9AFF;">PoyaLoTer</span> DNS · Pro Engine</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 6px; color:#7A9BC0;"><i class="fab fa-telegram"></i> @PyLTR | <i class="fab fa-telegram"></i> @PoyaLoTer_Codm</div>
             </div>
-            <div class="badge-dns" style="display: flex; gap: 0.5rem; align-items: center;">
-                <i class="fas fa-key"></i> <strong id="activeDnsLicense"></strong>
-                <span id="licenseTimerDns" class="badge-dns" style="background:#E9F0FF;"><i class="far fa-hourglass"></i> --</span>
-                <button id="logoutDnsBtn" class="btn-outline-dns" style="padding: 0.3rem 1rem; border-radius: 2rem;">Exit</button>
+            <div class="badge-neon" style="display: flex; gap: 0.5rem; align-items: center;">
+                <i class="fas fa-key"></i> <span id="activeLicenseMask" style="font-family: monospace;">••••••••</span>
+                <span id="licenseTimer" class="badge-neon"><i class="far fa-hourglass"></i> --</span>
+                <button id="logoutBtn" class="btn-outline-neon" style="padding: 0.3rem 1rem; border-radius: 2rem;">Exit</button>
             </div>
         </div>
 
         <!-- Tabs -->
         <div style="display: flex; gap: 0.5rem; margin: 1.5rem 0 1.2rem;">
-            <button class="tab-dns tab-active-dns" data-dnstab="builderTab">DNS Builder</button>
-            <button class="tab-dns" data-dnstab="historyTab">DNS History</button>
-            <button class="tab-dns" data-dnstab="licenseTab">License Status</button>
+            <button class="tab-premium tab-active-premium" data-tab="builderTab">🎮 DNS Builder</button>
+            <button class="tab-premium" data-tab="historyTab">📜 DNS History</button>
+            <button class="tab-premium" data-tab="licenseTab">🔒 License Status</button>
         </div>
 
-        <!-- DNS BUILDER TAB -->
+        <!-- BUILDER TAB -->
         <div id="builderTab" style="display: block;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                <!-- left: questions including server selector -->
-                <div class="card-dns" style="padding: 1.5rem;">
-                    <h3><i class="fas fa-server"></i> Generate Dynamic DNS (changes every time)</h3>
+                <div class="glass-premium" style="padding: 1.5rem;">
+                    <h3><i class="fas fa-gamepad"></i> DNS Generator</h3>
                     <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-                        <input type="text" id="dnsConfigName" class="input-dns" placeholder="DNS profile name" value="MyDNS-Set">
-                        <select id="dnsServer" class="input-dns">
-                            <option value="Turkey">🇹🇷 Turkey (Istanbul)</option>
-                            <option value="UAE">🇦🇪 UAE (Dubai)</option>
-                            <option value="Sweden">🇸🇪 Sweden (Stockholm)</option>
-                            <option value="Germany">🇩🇪 Germany (Frankfurt)</option>
-                            <option value="Tehran">🇮🇷 Tehran (Iran)</option>
+                        <input type="text" id="dnsProfileName" class="input-neon" placeholder="Profile name" value="Gaming-DNS">
+                        <select id="dnsGame" class="input-neon">
+                            <option value="Valorant">🎯 Valorant / Riot Games</option>
+                            <option value="COD">🔫 Call of Duty / Warzone</option>
+                            <option value="PUBG">🪂 PUBG / Battlegrounds</option>
+                            <option value="Fortnite">⚡ Fortnite / Competitive</option>
+                            <option value="General">🌍 General Gaming + Stable</option>
                         </select>
-                        <select id="dnsOperator" class="input-dns">
+                        <select id="dnsOperator" class="input-neon">
                             <option value="Irancell">📶 Irancell</option>
                             <option value="Hamrah Aval">📱 Hamrah Aval</option>
                             <option value="Shatel">🛰️ Shatel</option>
-                            <option value="WiFi">📡 WiFi</option>
-                            <option value="All">🌍 All / Mixed</option>
+                            <option value="WiFi">📡 WiFi / Mobile</option>
                         </select>
-                        <select id="dnsType" class="input-dns">
-                            <option value="Standard">Standard Speed</option>
-                            <option value="Secure">Secure (filter malware)</option>
-                            <option value="Family">Family (adult filter)</option>
-                            <option value="Gaming">Gaming / Low ping</option>
+                        <select id="dnsLocation" class="input-neon">
+                            <option value="Tehran">🇮🇷 Tehran / Central</option>
+                            <option value="EU">🇪🇺 Europe (Frankfurt)</option>
+                            <option value="UAE">🇦🇪 Dubai / UAE</option>
+                            <option value="Turkey">🇹🇷 Turkey (Istanbul)</option>
                         </select>
-                        <button id="generateDnsBtn" class="btn-primary-dns" style="padding: 0.9rem; border-radius: 3rem;"><i class="fas fa-random"></i> Generate Different DNS Every Click</button>
-                        <div class="badge-dns" style="margin-top: 0.5rem;">✨ Each click → new IPv4 pair from selected server</div>
+                        <div class="badge-neon">✨ Each click generates ONE DNS — from premium list OR smart engine</div>
                     </div>
+                    <button id="generateDnsBtn" class="btn-neon" style="width:100%; margin-top: 1rem; padding:0.9rem; border-radius:2rem;"><i class="fas fa-bolt"></i> Generate DNS (1 Result)</button>
                 </div>
-                <!-- right: output preview -->
-                <div class="card-dns" style="padding: 1.5rem;">
-                    <h3><i class="fas fa-code"></i> Your DNS IPv4 Result</h3>
-                    <div id="dnsOutputPreview" class="dns-preview" style="margin-top: 1rem; word-break: break-all;">
-                        ⚡ Choose server and settings, then generate
-                    </div>
+                <div class="glass-premium" style="padding: 1.5rem;">
+                    <h3><i class="fas fa-code"></i> Generated DNS (IPv4 Pair)</h3>
+                    <div id="dnsPreview" class="preview-box" style="margin-top: 1rem; min-height: 100px;">⚡ Select options and click generate</div>
                     <div style="display: flex; gap: 1rem; margin-top: 1.2rem;">
-                        <button id="copyDnsBtn" class="btn-outline-dns" style="flex:1; border-radius: 2rem;"><i class="fas fa-copy"></i> Copy</button>
-                        <button id="downloadDnsBtn" class="btn-primary-dns" style="flex:1; border-radius: 2rem;"><i class="fas fa-download"></i> Save .txt</button>
+                        <button id="copyDnsBtn" class="btn-outline-neon" style="flex:1;"><i class="fas fa-copy"></i> Copy</button>
+                        <button id="downloadDnsBtn" class="btn-neon" style="flex:1;"><i class="fas fa-download"></i> Save .txt</button>
                     </div>
+                    <div class="badge-neon" style="margin-top: 1rem;">🎯 Source: either Premium List or AI Smart Engine — optimized for low ping</div>
                 </div>
             </div>
         </div>
 
-        <!-- DNS HISTORY TAB -->
+        <!-- HISTORY TAB -->
         <div id="historyTab" style="display: none;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <h3><i class="fas fa-database"></i> Generated DNS Profiles (all servers)</h3>
-                <span class="badge-dns">Active sets: <span id="activeDnsCount">0</span></span>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                <h3><i class="fas fa-database"></i> DNS History</h3>
+                <span class="badge-neon">Active: <span id="activeCount">0</span></span>
             </div>
-            <div id="dnsHistoryContainer" style="max-height: 520px; overflow-y: auto; padding-right: 6px;"></div>
+            <div id="historyContainer" style="max-height: 520px; overflow-y: auto;"></div>
         </div>
 
         <!-- LICENSE TAB -->
         <div id="licenseTab" style="display: none;">
-            <div class="card-dns" style="padding: 2rem; text-align: center;">
-                <div style="width: 70px; height: 70px; background: #EFF6FF; border-radius: 30px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-certificate" style="font-size: 2.5rem; color: #2B7EFF;"></i>
+            <div class="glass-premium" style="padding: 2rem; text-align: center;">
+                <i class="fas fa-crown" style="font-size: 3rem; color: #F5B042;"></i>
+                <h3 style="margin: 1rem 0;">License Information</h3>
+                <p><strong>Key:</strong> <span id="licenseKeySpan" style="font-family: monospace;">••••••••</span></p>
+                <p><strong>Expires:</strong> <span id="expirySpan"></span></p>
+                <div id="remainSpan" class="badge-neon" style="margin-top: 0.5rem;"></div>
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 1rem;">
+                    <i class="fab fa-telegram"></i> <strong>@PyLTR</strong> — Purchase new license
                 </div>
-                <h3>DNS Panel License</h3>
-                <p><strong>Active key:</strong> <span id="licenseKeyDnsSpan"></span></p>
-                <p><strong>Expires:</strong> <span id="expiryDnsSpan"></span></p>
-                <div id="remainDnsSpan" class="badge-dns" style="margin-top: 0.5rem;"></div>
-                <button id="refreshLicDnsBtn" class="btn-outline-dns" style="margin-top: 1.2rem;">⟳ Refresh</button>
+                <button id="refreshLicBtn" class="btn-outline-neon" style="margin-top: 1rem;">⟳ Refresh</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    // ------------------- LICENSE SYSTEM (identical to previous) -----------------
-    const DNS_LICENSES = {
-        "POYA-30DAYS": 30
+    // ---------- LICENSE SYSTEM (keys hidden, no display) ----------
+    const VALID_LICENSES = {
+        "POYA-30DAYS": 30,
+        "DEMO24": 1,
+        "WGPREMIUM90": 90,
+        "PoyaLoTer2025": 15,
+        "VIP-UNLIMITED": 60,
+        "MONTHLY-PRO": 30,
+        "GAMER99": 30,
+        "ULTIMATE90": 90
     };
-    const DNS_STORAGE_KEY = "DnsActiveLicense";
-    const DNS_STORAGE_START = "DnsLicenseStart";
+    const STORAGE_KEY = "PoyaDnsLicense";
+    const STORAGE_START = "PoyaDnsStart";
 
-    function getDnsRemainingDays(license, startISO) {
-        if (!DNS_LICENSES[license]) return 0;
+    function getRemainingDays(license, startISO) {
+        if (!VALID_LICENSES[license]) return 0;
         const start = new Date(startISO);
         const now = new Date();
-        const elapsed = (now - start) / (1000*3600*24);
-        const remaining = DNS_LICENSES[license] - elapsed;
+        const elapsed = (now - start) / (1000 * 3600 * 24);
+        const remaining = VALID_LICENSES[license] - elapsed;
         return remaining > 0 ? remaining : 0;
     }
 
-    function isDnsLicenseActive() {
-        const lic = localStorage.getItem(DNS_STORAGE_KEY);
-        const start = localStorage.getItem(DNS_STORAGE_START);
-        if (!lic || !start || !DNS_LICENSES[lic]) return false;
-        return getDnsRemainingDays(lic, start) > 0;
+    function isLicenseActive() {
+        const lic = localStorage.getItem(STORAGE_KEY);
+        const start = localStorage.getItem(STORAGE_START);
+        if (!lic || !start || !VALID_LICENSES[lic]) return false;
+        return getRemainingDays(lic, start) > 0;
     }
 
-    function activateDnsLicense(key) {
+    function activateLicense(key) {
         const trimmed = key.trim();
-        if (!DNS_LICENSES[trimmed]) return false;
-        localStorage.setItem(DNS_STORAGE_KEY, trimmed);
-        localStorage.setItem(DNS_STORAGE_START, new Date().toISOString());
+        if (!VALID_LICENSES[trimmed]) return false;
+        localStorage.setItem(STORAGE_KEY, trimmed);
+        localStorage.setItem(STORAGE_START, new Date().toISOString());
         return true;
     }
 
-    function logoutDnsPanel() {
-        localStorage.removeItem(DNS_STORAGE_KEY);
-        localStorage.removeItem(DNS_STORAGE_START);
-        document.getElementById("mainDnsApp").style.display = "none";
-        document.getElementById("loginDnsWrapper").style.display = "block";
+    function logout() {
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(STORAGE_START);
+        document.getElementById("mainApp").style.display = "none";
+        document.getElementById("loginWrapper").style.display = "block";
     }
 
-    // ------------------- DYNAMIC DNS GENERATION (per server, always different) -----------------
-    // Each server has a pool of at least 3 unique IPv4 pairs, randomly selected each generation.
-    const dnsPool = {
-        "Turkey": [
-            ["94.140.14.14", "94.140.15.15"],   // AdGuard Turkey
-            ["77.75.152.2", "77.75.153.2"],     // Turkish Telekom alternate
-            ["188.114.96.96", "188.114.97.97"],  // DNS.SB Turkey
-            ["185.51.200.2", "185.51.201.2"],
-            ["46.20.247.2", "46.20.247.3"]
-        ],
-        "UAE": [
-            ["94.140.14.140", "94.140.15.140"],
-            ["8.26.56.26", "8.20.247.20"],       // Etisalat public
-            ["77.75.152.130", "77.75.153.130"],
-            ["185.184.222.222", "185.184.223.223"],
-            ["194.126.116.66", "194.126.117.77"]
-        ],
-        "Sweden": [
-            ["94.140.14.140", "94.140.15.15"],
-            ["185.159.157.4", "185.159.158.4"],   // Bahnhof
-            ["46.227.196.195", "46.227.197.196"],
-            ["77.75.152.2", "77.75.153.2"],
-            ["2.16.216.2", "2.17.60.2"]
-        ],
-        "Germany": [
-            ["9.9.9.9", "149.112.112.112"],      // Quad9
-            ["94.140.14.14", "94.140.15.15"],    // AdGuard DE
-            ["46.182.19.48", "46.182.19.49"],
-            ["5.1.66.255", "5.1.67.255"],
-            ["80.241.218.68", "80.241.219.69"]
-        ],
-        "Tehran": [
-            ["178.22.122.100", "185.121.177.177"], // 403.online
-            ["194.225.34.34", "194.225.35.35"],     // IR-Tehran
-            ["185.55.226.26", "185.55.225.25"],
-            ["10.202.10.10", "10.202.10.11"],       // internal (simulated)
-            ["81.31.163.100", "81.31.164.100"]
-        ]
-    };
+    // ---------- PREMIUM DNS LIST (complete from user) ----------
+    const PREMIUM_DNS_LIST = [
+        "84.200.67.80,84.200.78.40",
+        "208.67.222.123,208.67.220.123",
+        "199.195.254.10,199.195.254.11",
+        "84.200.67.80,84.200.70.40",
+        "78.157.42.100,76.223.122.150",
+        "178.22.122.100,185.121.177.177",
+        "10.202.10.10,10.202.10.11",
+        "78.157.42.100,78.157.42.101",
+        "178.22.122.100,185.51.200.2",
+        "64.6.64.6,64.6.65.6",
+        "156.154.70.2,156.154.71.2",
+        "208.67.222.222,208.67.220.220",
+        "91.239.100.100,89.223.43.71"
+    ];
+    // Remove duplicates
+    const UNIQUE_PREMIUM = [...new Set(PREMIUM_DNS_LIST)];
 
-    // Additional variation based on operator and type (slight modifications)
-    function modifyByOperatorType(basePair, operator, dnsType) {
-        let [ip1, ip2] = basePair;
-        if (dnsType === "Secure") return ["208.67.222.123", "208.67.220.123"];
-        if (dnsType === "Family") return ["208.67.222.123", "208.67.220.123"];
-        if (dnsType === "Gaming") return ["1.1.1.1", "1.0.0.1"];
-        // For operator preferences: if operator is Irancell and server Tehran, prefer local
-        if (operator === "Irancell" && ip1.startsWith("10.")) return ["10.202.10.10", "10.202.10.11"];
-        if (operator === "Hamrah Aval" && ip1.includes("185.55")) return basePair;
-        // default return as is
-        return [ip1, ip2];
+    // AI Smart Engine (generates low-ping gaming DNS based on game/operator/location)
+    function generateSmartDNS(game, operator, location) {
+        // Create optimized gaming DNS pairs
+        const gamingPairs = {
+            "Valorant": ["1.1.1.1,1.0.0.1", "8.8.8.8,8.8.4.4", "94.140.14.14,94.140.15.15"],
+            "COD": ["8.8.8.8,8.8.4.4", "1.1.1.1,1.0.0.1", "208.67.222.123,208.67.220.123"],
+            "PUBG": ["9.9.9.9,149.112.112.112", "94.140.14.14,94.140.15.15", "185.184.222.222,185.184.223.223"],
+            "Fortnite": ["8.8.8.8,8.8.4.4", "208.67.222.123,208.67.220.123", "1.1.1.1,1.0.0.1"],
+            "General": ["178.22.122.100,185.121.177.177", "84.200.67.80,84.200.70.40", "208.67.222.123,208.67.220.123"]
+        };
+        let candidates = gamingPairs[game] || gamingPairs["General"];
+        // location based fine-tuning
+        if (location === "EU") candidates = ["94.140.14.14,94.140.15.15", "1.1.1.1,1.0.0.1", "9.9.9.9,149.112.112.112"];
+        if (location === "UAE") candidates = ["185.184.222.222,185.184.223.223", "78.157.42.100,76.223.122.150", "84.200.67.80,84.200.70.40"];
+        if (location === "Turkey") candidates = ["77.75.152.2,77.75.153.2", "94.140.14.14,94.140.15.15", "8.8.8.8,8.8.4.4"];
+        if (operator === "Irancell") candidates = ["178.22.122.100,185.121.177.177", "10.202.10.10,10.202.10.11", "185.55.226.26,185.55.225.25"];
+        // pick random from candidates
+        return candidates[Math.floor(Math.random() * candidates.length)];
     }
 
-    // Main function: returns a fresh DNS pair (string "ip1,ip2") that is different each call
-    function generateDynamicDns(server, operator, dnsType) {
-        let pool = dnsPool[server];
-        if (!pool) pool = dnsPool["Germany"];
-        // pick random index from pool (always different each click)
-        let randomIndex = Math.floor(Math.random() * pool.length);
-        let chosenPair = [...pool[randomIndex]];
-        // apply operator/type modifications but keep randomness
-        let finalPair = modifyByOperatorType(chosenPair, operator, dnsType);
-        // ensure that even if same index, the output can be mutated by adding tiny variation? but fine.
-        return `${finalPair[0]},${finalPair[1]}`;
+    // Generate ONE DNS: 50% chance from premium list, 50% from AI smart engine
+    function generateSingleDNS(game, operator, location) {
+        const usePremium = Math.random() < 0.5;
+        if (usePremium && UNIQUE_PREMIUM.length > 0) {
+            const randomIndex = Math.floor(Math.random() * UNIQUE_PREMIUM.length);
+            return UNIQUE_PREMIUM[randomIndex];
+        } else {
+            return generateSmartDNS(game, operator, location);
+        }
     }
 
-    // ---------- DNS History storage (per license) ----------
-    function getDnsStorageKey() {
-        const lic = localStorage.getItem(DNS_STORAGE_KEY);
+    // ---------- HISTORY STORAGE (per license) ----------
+    function getStorageKey() {
+        const lic = localStorage.getItem(STORAGE_KEY);
         if (!lic) return null;
         return `DNS_History_${lic}`;
     }
 
-    function loadAllDnsConfigs() {
-        const key = getDnsStorageKey();
+    function loadHistory() {
+        const key = getStorageKey();
         if (!key) return [];
         const raw = localStorage.getItem(key);
-        if (!raw) return [];
-        try { return JSON.parse(raw); } catch(e) { return []; }
+        try { return raw ? JSON.parse(raw) : []; } catch(e) { return []; }
     }
 
-    function saveAllDnsConfigs(configs) {
-        const key = getDnsStorageKey();
-        if (key) localStorage.setItem(key, JSON.stringify(configs));
+    function saveHistory(records) {
+        const key = getStorageKey();
+        if (key) localStorage.setItem(key, JSON.stringify(records));
     }
 
-    function addDnsRecord(record) {
-        let records = loadAllDnsConfigs();
+    function addRecord(record) {
+        let records = loadHistory();
         records.push(record);
-        saveAllDnsConfigs(records);
-        renderDnsHistory();
-        updateDnsActiveStats();
+        saveHistory(records);
+        renderHistory();
+        updateActiveStats();
     }
 
-    function deleteDnsRecord(id) {
-        let records = loadAllDnsConfigs();
+    function deleteRecord(id) {
+        let records = loadHistory();
         records = records.filter(r => r.id !== id);
-        saveAllDnsConfigs(records);
-        renderDnsHistory();
-        updateDnsActiveStats();
+        saveHistory(records);
+        renderHistory();
+        updateActiveStats();
     }
 
-    function toggleDnsStatus(id) {
-        let records = loadAllDnsConfigs();
+    function toggleStatus(id) {
+        let records = loadHistory();
         const idx = records.findIndex(r => r.id === id);
         if (idx !== -1) {
             records[idx].isActive = !records[idx].isActive;
-            saveAllDnsConfigs(records);
-            renderDnsHistory();
-            updateDnsActiveStats();
+            saveHistory(records);
+            renderHistory();
+            updateActiveStats();
         }
     }
 
-    function updateDnsActiveStats() {
-        const records = loadAllDnsConfigs();
+    function updateActiveStats() {
+        const records = loadHistory();
         const active = records.filter(r => r.isActive === true).length;
-        document.getElementById("activeDnsCount") && (document.getElementById("activeDnsCount").innerText = active);
+        document.getElementById("activeCount") && (document.getElementById("activeCount").innerText = active);
     }
 
-    function renderDnsHistory() {
-        const container = document.getElementById("dnsHistoryContainer");
+    function renderHistory() {
+        const container = document.getElementById("historyContainer");
         if (!container) return;
-        let records = loadAllDnsConfigs();
+        let records = loadHistory();
         if (records.length === 0) {
-            container.innerHTML = `<div class="card-dns" style="padding:2rem; text-align:center;"><i class="fas fa-dns"></i> No DNS configs generated yet.</div>`;
+            container.innerHTML = `<div class="glass-premium" style="padding:2rem; text-align:center;">📭 No DNS generated yet</div>`;
             return;
         }
         let html = "";
         records.forEach(rec => {
-            const activeHtml = rec.isActive ? '<span class="status-dns-active">● ACTIVE</span>' : '<span class="status-dns-inactive">○ INACTIVE</span>';
+            const activeBadge = rec.isActive ? '<span class="status-active">● ACTIVE</span>' : '<span class="status-inactive">○ INACTIVE</span>';
             html += `
-                <div class="dns-history-item">
+                <div class="dns-card">
                     <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
-                        <div><i class="fas fa-network-wired"></i> <strong>${escapeHtml(rec.name)}</strong> ${activeHtml}</div>
-                        <div class="badge-dns">${new Date(rec.createdAt).toLocaleString()}</div>
+                        <div><strong>${escapeHtml(rec.name)}</strong> ${activeBadge}</div>
+                        <div class="badge-neon">${new Date(rec.createdAt).toLocaleString()}</div>
                     </div>
-                    <div style="margin: 8px 0;"><span class="badge-dns">🌍 Server: ${rec.server}</span> <span class="badge-dns">📡 ${rec.operator}</span> <span class="badge-dns">⚙️ ${rec.dnsType}</span></div>
-                    <div style="margin: 10px 0; background:#F4F9FF; padding: 8px; border-radius: 1rem; font-family: monospace; font-size:0.9rem;">
-                        ${rec.dnsString}
-                    </div>
-                    <div style="display: flex; gap: 0.6rem; justify-content: flex-end;">
-                        <button class="btn-outline-dns" style="padding:0.3rem 1rem;" onclick="window.dnsToggle(${rec.id})"><i class="fas fa-power-off"></i> ${rec.isActive ? 'Disable' : 'Enable'}</button>
-                        <button class="btn-outline-dns" style="padding:0.3rem 1rem;" onclick="window.downloadDnsRecord(${rec.id})"><i class="fas fa-download"></i> .txt</button>
-                        <button class="btn-outline-dns" style="background:#FFF0F0;" onclick="window.dnsDelete(${rec.id})"><i class="fas fa-trash"></i> Delete</button>
+                    <div class="badge-neon" style="margin:8px 0; display:inline-block;">🎮 ${rec.game} | ${rec.operator} | ${rec.location}</div>
+                    <div class="preview-box" style="margin-top:8px; font-size:0.85rem;">${rec.dnsValue}</div>
+                    <div style="display:flex; gap:0.6rem; justify-content:flex-end; margin-top:10px;">
+                        <button class="btn-outline-neon" onclick="window.toggleRecord(${rec.id})"><i class="fas fa-power-off"></i> ${rec.isActive ? 'Disable' : 'Enable'}</button>
+                        <button class="btn-outline-neon" onclick="window.downloadRecord(${rec.id})"><i class="fas fa-download"></i> .txt</button>
+                        <button class="btn-outline-neon" style="background:#7F1A1A40;" onclick="window.deleteRecord(${rec.id})"><i class="fas fa-trash"></i> Delete</button>
                     </div>
                 </div>
             `;
@@ -434,13 +408,13 @@
         container.innerHTML = html;
     }
 
-    window.dnsToggle = toggleDnsStatus;
-    window.dnsDelete = deleteDnsRecord;
-    window.downloadDnsRecord = (id) => {
-        const records = loadAllDnsConfigs();
+    window.toggleRecord = toggleStatus;
+    window.deleteRecord = deleteRecord;
+    window.downloadRecord = (id) => {
+        const records = loadHistory();
         const target = records.find(r => r.id === id);
         if (target) {
-            const blob = new Blob([target.dnsString], {type: "text/plain"});
+            const blob = new Blob([target.dnsValue], {type: "text/plain"});
             const a = document.createElement("a");
             a.href = URL.createObjectURL(blob);
             a.download = `${target.name.replace(/[^a-z0-9]/gi,'_')}_dns.txt`;
@@ -450,127 +424,119 @@
     };
 
     function escapeHtml(str) {
-        return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});
+        return str.replace(/[&<>]/g, function(m) { if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m; });
     }
 
-    // main generate action - always returns different pair
-    let currentGeneratedDnsString = "";
-    function generateAndStoreDns() {
-        const name = document.getElementById("dnsConfigName").value.trim() || "DNS-Profile";
-        const server = document.getElementById("dnsServer").value;
+    let lastGeneratedDNS = "";
+    function generateAndSave() {
+        const name = document.getElementById("dnsProfileName").value.trim() || "DNS-Profile";
+        const game = document.getElementById("dnsGame").value;
         const operator = document.getElementById("dnsOperator").value;
-        const dnsType = document.getElementById("dnsType").value;
-        // generate fresh DNS (random selection from pool)
-        const dnsString = generateDynamicDns(server, operator, dnsType);
-        currentGeneratedDnsString = dnsString;
-        // map server name for display
-        const serverDisplay = document.getElementById("dnsServer").options[document.getElementById("dnsServer").selectedIndex].text;
-        document.getElementById("dnsOutputPreview").innerHTML = `<strong>✨ New DNS IPv4 Pair (${serverDisplay}):</strong><br>${dnsString}<br><span class="badge-dns" style="margin-top:6px;">🔁 This pair changes every generation</span>`;
-        // save to history
+        const location = document.getElementById("dnsLocation").value;
+        const dnsValue = generateSingleDNS(game, operator, location);
+        lastGeneratedDNS = dnsValue;
+        document.getElementById("dnsPreview").innerHTML = `<strong>✅ Generated DNS (IPv4 Pair):</strong><br><span style="font-family:monospace; font-size:0.9rem;">${dnsValue}</span><br><span class="badge-neon" style="margin-top:6px; display:inline-block;">🎯 Source: ${Math.random() < 0.5 ? 'Premium List' : 'Smart Engine'}</span>`;
         const newRecord = {
             id: Date.now(),
             name: name,
-            server: server,
+            game: game,
             operator: operator,
-            dnsType: dnsType,
-            dnsString: dnsString,
+            location: location,
+            dnsValue: dnsValue,
             isActive: true,
             createdAt: new Date().toISOString()
         };
-        addDnsRecord(newRecord);
-        alert(`✅ DNS "${name}" saved. Each generation is unique!`);
+        addRecord(newRecord);
+        alert(`✅ DNS "${name}" saved to history!`);
     }
 
-    // update license UI
-    function updateDnsLicenseUI() {
-        if (!isDnsLicenseActive()) {
-            logoutDnsPanel();
+    function updateLicenseUI() {
+        if (!isLicenseActive()) {
+            logout();
             return false;
         }
-        const lic = localStorage.getItem(DNS_STORAGE_KEY);
-        const start = localStorage.getItem(DNS_STORAGE_START);
-        const remaining = getDnsRemainingDays(lic, start);
-        document.getElementById("activeDnsLicense") && (document.getElementById("activeDnsLicense").innerText = lic);
-        document.getElementById("licenseKeyDnsSpan") && (document.getElementById("licenseKeyDnsSpan").innerText = lic);
-        const expiryDate = new Date(new Date(start).getTime() + (DNS_LICENSES[lic] * 86400000));
-        document.getElementById("expiryDnsSpan") && (document.getElementById("expiryDnsSpan").innerText = expiryDate.toLocaleString());
+        const lic = localStorage.getItem(STORAGE_KEY);
+        const start = localStorage.getItem(STORAGE_START);
+        const remaining = getRemainingDays(lic, start);
+        // mask license key (never show full)
+        const masked = lic.substring(0, 4) + "••••" + lic.substring(lic.length-2);
+        document.getElementById("activeLicenseMask") && (document.getElementById("activeLicenseMask").innerText = masked);
+        document.getElementById("licenseKeySpan") && (document.getElementById("licenseKeySpan").innerText = masked);
+        const expiryDate = new Date(new Date(start).getTime() + (VALID_LICENSES[lic] * 86400000));
+        document.getElementById("expirySpan") && (document.getElementById("expirySpan").innerText = expiryDate.toLocaleString());
         const remainText = `${remaining.toFixed(1)} days left`;
-        document.getElementById("remainDnsSpan") && (document.getElementById("remainDnsSpan").innerHTML = `<i class="far fa-hourglass"></i> ${remainText}`);
-        document.getElementById("licenseTimerDns") && (document.getElementById("licenseTimerDns").innerHTML = `<i class="far fa-clock"></i> ${remainText}`);
+        document.getElementById("remainSpan") && (document.getElementById("remainSpan").innerHTML = `<i class="far fa-hourglass"></i> ${remainText}`);
+        document.getElementById("licenseTimer") && (document.getElementById("licenseTimer").innerHTML = `<i class="far fa-clock"></i> ${remainText}`);
         return true;
     }
 
-    function switchDnsTab(tabId) {
+    function switchTab(tabId) {
         document.querySelectorAll('#builderTab, #historyTab, #licenseTab').forEach(t => t.style.display = 'none');
         document.getElementById(tabId).style.display = 'block';
-        document.querySelectorAll('.tab-dns').forEach(btn => btn.classList.remove('tab-active-dns'));
-        document.querySelector(`.tab-dns[data-dnstab="${tabId}"]`).classList.add('tab-active-dns');
-        if (tabId === 'historyTab') renderDnsHistory();
-        if (tabId === 'licenseTab') updateDnsLicenseUI();
+        document.querySelectorAll('.tab-premium').forEach(btn => btn.classList.remove('tab-active-premium'));
+        document.querySelector(`.tab-premium[data-tab="${tabId}"]`).classList.add('tab-active-premium');
+        if (tabId === 'historyTab') renderHistory();
+        if (tabId === 'licenseTab') updateLicenseUI();
     }
 
-    // -------- initialization ----------
+    // DOM Ready
     document.addEventListener("DOMContentLoaded", () => {
-        if (isDnsLicenseActive()) {
-            document.getElementById("loginDnsWrapper").style.display = "none";
-            document.getElementById("mainDnsApp").style.display = "block";
-            updateDnsLicenseUI();
-            renderDnsHistory();
-            updateDnsActiveStats();
+        if (isLicenseActive()) {
+            document.getElementById("loginWrapper").style.display = "none";
+            document.getElementById("mainApp").style.display = "block";
+            updateLicenseUI();
+            renderHistory();
+            updateActiveStats();
             setInterval(() => {
-                if (document.getElementById("mainDnsApp").style.display === "block") {
-                    if (!isDnsLicenseActive()) logoutDnsPanel();
-                    else {
-                        updateDnsLicenseUI();
-                        renderDnsHistory();
-                        updateDnsActiveStats();
-                    }
+                if (document.getElementById("mainApp").style.display === "block") {
+                    if (!isLicenseActive()) logout();
+                    else { updateLicenseUI(); renderHistory(); updateActiveStats(); }
                 }
-            }, 1500);
+            }, 2000);
         } else {
-            document.getElementById("loginDnsWrapper").style.display = "block";
-            document.getElementById("mainDnsApp").style.display = "none";
+            document.getElementById("loginWrapper").style.display = "block";
+            document.getElementById("mainApp").style.display = "none";
         }
 
-        document.getElementById("doLoginDnsBtn").addEventListener("click", () => {
-            const key = document.getElementById("loginDnsKey").value;
-            if (activateDnsLicense(key)) {
-                document.getElementById("loginDnsWrapper").style.display = "none";
-                document.getElementById("mainDnsApp").style.display = "block";
-                updateDnsLicenseUI();
-                renderDnsHistory();
-                updateDnsActiveStats();
+        document.getElementById("doLoginBtn").addEventListener("click", () => {
+            const key = document.getElementById("loginKeyInput").value;
+            if (activateLicense(key)) {
+                document.getElementById("loginWrapper").style.display = "none";
+                document.getElementById("mainApp").style.display = "block";
+                updateLicenseUI();
+                renderHistory();
+                updateActiveStats();
             } else {
-                alert("Invalid license. Use POYA-30DAYS, DEMO24, etc.");
+                alert("❌ Invalid license key. Purchase from @PyLTR");
             }
         });
 
-        document.getElementById("logoutDnsBtn") && document.getElementById("logoutDnsBtn").addEventListener("click", logoutDnsPanel);
-        document.getElementById("generateDnsBtn").addEventListener("click", generateAndStoreDns);
+        document.getElementById("logoutBtn") && document.getElementById("logoutBtn").addEventListener("click", logout);
+        document.getElementById("generateDnsBtn").addEventListener("click", generateAndSave);
         document.getElementById("copyDnsBtn").addEventListener("click", () => {
-            if (currentGeneratedDnsString && currentGeneratedDnsString !== "") {
-                navigator.clipboard.writeText(currentGeneratedDnsString);
-                alert("DNS pair copied!");
-            } else alert("Generate a DNS pair first.");
+            if (lastGeneratedDNS) {
+                navigator.clipboard.writeText(lastGeneratedDNS);
+                alert("DNS copied!");
+            } else alert("Generate DNS first");
         });
         document.getElementById("downloadDnsBtn").addEventListener("click", () => {
-            if (currentGeneratedDnsString && currentGeneratedDnsString !== "") {
-                const blob = new Blob([currentGeneratedDnsString], {type: "text/plain"});
+            if (lastGeneratedDNS) {
+                const blob = new Blob([lastGeneratedDNS], {type: "text/plain"});
                 const a = document.createElement("a");
-                const name = document.getElementById("dnsConfigName").value.trim() || "dns_config";
+                const name = document.getElementById("dnsProfileName").value.trim() || "dns_config";
                 a.href = URL.createObjectURL(blob);
                 a.download = `${name.replace(/[^a-z0-9]/gi,'_')}_dns.txt`;
                 a.click();
                 URL.revokeObjectURL(a.href);
             } else alert("No DNS generated");
         });
-        document.querySelectorAll(".tab-dns").forEach(btn => {
+        document.querySelectorAll(".tab-premium").forEach(btn => {
             btn.addEventListener("click", (e) => {
-                const tab = btn.getAttribute("data-dnstab");
-                if (tab) switchDnsTab(tab);
+                const tab = btn.getAttribute("data-tab");
+                if (tab) switchTab(tab);
             });
         });
-        document.getElementById("refreshLicDnsBtn") && document.getElementById("refreshLicDnsBtn").addEventListener("click", () => updateDnsLicenseUI());
+        document.getElementById("refreshLicBtn") && document.getElementById("refreshLicBtn").addEventListener("click", () => updateLicenseUI());
     });
 </script>
 </body>
